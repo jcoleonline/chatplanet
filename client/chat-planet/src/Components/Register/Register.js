@@ -10,7 +10,8 @@ const Register = () => {
             <img src={logo} alt="logo" className="logo-image"/>
             <form className="form-login">
                 <input className='email-input' type="text" placeholder="email"></input>
-                <input className='password-input' type="password" placeholder="password" ></input>
+                <input className='password-input' type="password" placeholder="create password" ></input>
+                <input className='password-input' type="password" placeholder="confirm password" ></input>
             </form>
             <RegisterButton className='register-button' />
                         </div>
