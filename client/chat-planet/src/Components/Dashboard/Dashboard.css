@@ -1,0 +1,70 @@
+body {
+    background: #F868E8;
+    background: -moz-linear-gradient(left, #F868E8 0%, #2388CB 62%, #F868E8 100%);
+    background: -webkit-linear-gradient(left, #F868E8 0%, #2388CB 62%, #F868E8 100%);
+    background: linear-gradient(to right, #F868E8 0%, #2388CB 62%, #F868E8 100%);
+}
+
+main {
+    min-height: 100vh;
+    color: white;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    margin-left: 3%;
+    min-height: 80vh;
+    flex: 1;
+    min-height: 80vh;
+}
+
+.users-container {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background: rgba(240, 255, 255, 0.772);
+    color: black;
+    min-width: 15vw;
+    /* margin-right: 75%;
+   
+   
+    min-height: 80vh; */
+    border: solid black 2px;
+    border-radius: 3%;
+}
+.users-container > h2 {
+    text-align: center;
+}
+.chatbox-message-container {
+    min-width: 70vw;
+    margin-left: 3%
+}
+.chatbox {
+    text-align: start;
+    background: rgba(240, 255, 255, 0.772);
+    color: black;
+    border: solid black 2px;
+    border-radius: 5%;
+    min-height: 50vh;
+    text-align: center;
+    margin-bottom: 10%
+
+}
+.message {
+    background: rgb(240, 255, 255, 0.772);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(240, 255, 255, 0.772);
+    color: black;
+    /* margin-right: 75%;
+    margin-left: 3%;
+    margin-top: 3%;
+    min-height: 80vh; */
+    border: solid black 2px;
+    border-radius: 5%;
+    min-height: 20vh;
+}
