@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 const RegisterButton = () => {
     return (
         <div className='register-button'>
-           <Button variant="primary" className='register-button'>Primary</Button>{' '}
+           <Button variant="primary" className='register-button'>Register</Button>{' '}
         </div>
     );
 };

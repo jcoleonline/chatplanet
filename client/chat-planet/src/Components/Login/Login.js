@@ -1,18 +1,20 @@
+import './Login.css';
+import logo from '../../image/Colorful Infinite Logo Design (500 × 400 px).png'
+import LoginButton from './Login-button/Login-button';
+
 const Login = () => {
     return (
-        <div className="login-form">
-            <h1 className="title">Log In</h1>
-            <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" />
-            {!isLoggingIn && <>
-                <label><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email"/>
-            </>}
-            <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" />
-            <button type="submit">{isLoggingIn ? "Login" : "Register"}</button>
-            <a>{isLoggingIn ? "Register" : "Login"}</a>
-            {message && <p>{message}</p>}
+        <div className="container">
+            <div className="login-container">
+            <img src={logo} alt="logo" className="logo-image"/>
+            <form className="form-login">
+                <input className='email-input' type="text" placeholder="email"></input>
+                <input className='password-input' type="password" placeholder="password" ></input>
+            </form>
+            <LoginButton className='login-button' />
+                        </div>
         </div>
     )
-}
+};
+
+export default Login;
