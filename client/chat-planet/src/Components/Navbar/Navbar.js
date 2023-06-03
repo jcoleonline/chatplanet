@@ -1,9 +1,11 @@
+import Button from 'react-bootstrap/Button';
+
 const Navbar = () => {
     return (
         <div className="nav-container">
             <nav className="navbar navbar-light bg-light">
                 <form className="form-inline">
-                    <button className="btn btn-outline-success" type="button">Login</button>
+                <Button variant="outline-primary">Primary</Button>{' '}
                 </form>
             </nav>
         </div>
