@@ -27,6 +27,7 @@ main {
     background: rgba(240, 255, 255, 0.772);
     color: black;
     min-width: 15vw;
+    /* text-align: center; */
     /* margin-right: 75%;
    
    
@@ -42,7 +43,6 @@ main {
     margin-left: 3%
 }
 .chatbox {
-    text-align: start;
     background: rgba(240, 255, 255, 0.772);
     color: black;
     border: solid black 2px;
@@ -67,4 +67,18 @@ main {
     border: solid black 2px;
     border-radius: 5%;
     min-height: 20vh;
+}
+.horizontal-rule {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.235);
+    /* margin-left: 2px;
+    margin-right: 2px; */
+    min-width: fit-content;
+    height: 2px;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+}
+.userName {
+    margin-left: 15px;
 }

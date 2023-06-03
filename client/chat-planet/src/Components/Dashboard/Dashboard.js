@@ -11,15 +11,17 @@ const Dashboard = () => {
                     <h2>
                         Chats
                     </h2>
-                    <p>user1</p>
-                    <br />
-                    <p>user2</p>
-                    <br />
-                    <p>user3</p>
+                    <div className="horizontal-rule"></div>
+                    <div className="userName">User1</div>
+                    <div className="horizontal-rule"></div>
+                    <div className="userName">User2</div>
+                    <div className="horizontal-rule"></div>
+                    <div className="userName">User3</div>
+                    <div className="horizontal-rule"></div>
                 </div>
                 <div className="chatbox-message-container">
                     <div className="chatbox">
-                        Im the chatbox
+                        I'm the chatbox
                     </div>
                     <div className="message">
                         Message
