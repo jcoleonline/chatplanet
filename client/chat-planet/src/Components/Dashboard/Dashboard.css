@@ -15,9 +15,7 @@ main {
     flex-direction: row;
     margin-top: 3%;
     margin-left: 3%;
-    min-height: 80vh;
-    flex: 1;
-    min-height: 80vh;
+    height: 80vh;
 }
 
 .users-container {
@@ -27,13 +25,9 @@ main {
     background: rgba(240, 255, 255, 0.772);
     color: black;
     min-width: 15vw;
-    /* text-align: center; */
-    /* margin-right: 75%;
-   
-   
-    min-height: 80vh; */
     border: solid black 2px;
     border-radius: 16px;
+    overflow-y: scroll;
 }
 
 .users-container>h2 {
@@ -52,11 +46,13 @@ main {
     color: black;
     border: solid black 2px;
     border-radius: 16px;
-    min-height: 60vh;
+    height: 60vh;
+    overflow-x: auto;
     /* text-align: center; */
-    margin-bottom: 4%;
+    margin-bottom: 5%;
     padding: 16px;
     gap: 8px;
+    
 }
 
 .message-and-send {
@@ -93,7 +89,7 @@ textarea::-webkit-resizer {
 textarea {
     resize: none;
     height: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
     max-height: 100px;
     min-height: 100px;
     padding: 8px;
@@ -106,17 +102,17 @@ textarea {
 .message-sent {
     align-self: flex-end;
     background: #F868E8;
-    /* min-width: fit-content; */
+    max-width: 25vw;
     padding: 6px;
     border-radius: 8px;
-    color: white;
+    color: azure;
 }
 .message-received {
     display: flex;
     background: #2388CB;
-    max-width: fit-content;
+    width: fit-content;
+    max-width: 25vw;
     padding: 6px;
-    /* margin: auto; */
     border-radius: 8px;
-    color: white;
+    color: azure;
 }
