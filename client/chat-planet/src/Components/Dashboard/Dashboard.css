@@ -22,10 +22,20 @@ main {
     display: flex;
     flex-direction: column;
     text-align: start;
-    background: rgba(240, 255, 255, 0.772);
-    color: black;
+    /* background: rgba(240, 255, 255, 0.772); */
+    /* color: black; */
     min-width: 15vw;
-    border: solid black 2px;
+    /* border: solid black 2px; */
+    border-radius: 16px;
+}
+.user-list {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    /* background: rgba(240, 255, 255, 0.772); */
+    /* color: black; */
+    min-width: 15vw;
+    /* border: solid black 2px; */
     border-radius: 16px;
     overflow-y: scroll;
 }
@@ -74,11 +84,18 @@ main {
 .horizontal-rule {
     background-color: rgba(0, 0, 0, 0.235);
     height: 2px;
-    margin: 12.5px 0;
+    margin: 8px 0;
 }
 
 .userName {
-    margin-left: 15px;
+    /* margin-left: 15px; */
+    background: rgba(240, 255, 255, 0.772);
+    text-align: center;
+    color: black;
+    border: solid black 2px;
+    border-radius: 16px;
+    margin-bottom: 7%;
+    padding: 16px;
 }
 
 textarea::-webkit-resizer {
