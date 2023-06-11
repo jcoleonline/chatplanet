@@ -1,8 +1,10 @@
-import './Dashboard.css'
+import Navbar from '../Navbar/Navbar';
+import './Dashboard.css';
 
 const Dashboard = () => {
     return (
         <main>
+            <Navbar />
             <div className="app">
                 Welcome, User
             </div>

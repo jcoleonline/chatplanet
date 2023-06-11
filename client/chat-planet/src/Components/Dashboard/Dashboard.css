@@ -6,8 +6,12 @@ body {
 }
 
 main {
-    min-height: 100vh;
     color: white;
+    padding: 1rem;
+}
+
+.app {
+    padding: 1rem;
 }
 
 .app-container {
@@ -17,7 +21,6 @@ main {
     margin-left: 3%;
     min-height: 80vh;
     flex: 1;
-    min-height: 80vh;
 }
 
 .users-container {
@@ -29,29 +32,33 @@ main {
     min-width: 15vw;
     /* text-align: center; */
     /* margin-right: 75%;
-   
-   
     min-height: 80vh; */
     border: solid black 2px;
-    border-radius: 3%;
+    border-radius: 1rem;
 }
 .users-container > h2 {
     text-align: center;
 }
 .chatbox-message-container {
     min-width: 70vw;
-    margin-left: 3%
+    margin-left: 1.5%;
 }
 .chatbox {
     background: rgba(240, 255, 255, 0.772);
     color: black;
     border: solid black 2px;
-    border-radius: 5%;
-    min-height: 50vh;
+    border-radius: 1rem;
+    min-height: 65vh;
+    width: 65vw;
     text-align: center;
-    margin-bottom: 10%
-
+    margin-bottom: 2%;
+    overflow-y: scroll;
 }
+
+/* .chatbox :: -webkit-scrollbar-track {
+    background: #2388CB
+} */
+
 .message {
     background: rgb(240, 255, 255, 0.772);
     color: black;
@@ -65,8 +72,9 @@ main {
     margin-top: 3%;
     min-height: 80vh; */
     border: solid black 2px;
-    border-radius: 5%;
-    min-height: 20vh;
+    border-radius: 1rem;
+    min-height: 15vh;
+    width: 65vw;
 }
 .horizontal-rule {
     display: flex;
