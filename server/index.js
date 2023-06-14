@@ -1,12 +1,15 @@
 if(process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
-
+const session = require('express-session');
 const Sequelize = require('sequelize');
 const userRouter = require('./routes/user');
+const dashboardRouter = require('./routes/dashboard');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const flash = require('express-flash');
+const { User } = require('./models');
+const initializePassport = require('./passportconfig');
 
 
 const http = require('http');
@@ -23,24 +26,24 @@ app.get('/', (req, res) => {
     res.send('Hello from Express!');
 });
 
-const initializePassport = require('./passportconfig');
 initializePassport(
     passport,
-    username => users.find(user => user.username === username),
-    id => users.find(user => user.id === id)
-)
+    async (username) => await User.findOne({ where: { username } }),
+    async (id) => await User.findByPk(id)
+);
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
-app.use(userRouter)
-app.use(flash())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: false
-}))
-app.use(passport.initialize())
-app.use(passport.session())
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+app.use(userRouter);
+app.use(dashboardRouter);
 
 
 server.listen(port, hostname, () => {

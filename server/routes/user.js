@@ -1,20 +1,43 @@
 const express = require('express');
-const sequelize = require('sequelize')
-const router = express.Router();
 const bcrypt = require('bcrypt');
-const session = require('express-session');
-const {User} = require("./../models");
-const passport = require("../passportconfig");
+const { User } = require('./../models');
+const passport = require('passport');
+const router = express.Router();
+
 
 
 router.get("/", (req, res) => {
     res.render("home");
   });
 
+  
+  // router.post('/user-login', (req, res, next) => {
+  //   passport.authenticate('local', (err, user, info) => {
+  //     if (err) {
+  //       return next(err);
+  //     }
+  
+  //     if (!user) {
+  //       req.flash('error', info.message);
+  //       return res.redirect('/login'); // Redirect to the login page if authentication fails
+  //     }
+  
+  //     req.logIn(user, (err) => {
+  //       if (err) {
+  //         return next(err);
+  //       }
+  
+  //       return res.redirect('/dashboard'); // Redirect to the dashboard page if authentication succeeds
+  //     });
+  //   })(req, res, next);
+  // });
 
-router.post("/user-login", passport.authenticate('local', {
-  failureFlash: true
-}))
+
+  router.post('/user-login', passport.authenticate('local', {
+    successRedirect: '/dashboard',
+    failureRedirect: '/login',
+    failureFlash: true
+  }));
 
   
   router.post("/user-register", async (req, res) => {
