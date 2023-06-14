@@ -1,9 +1,10 @@
-import './Dashboard.css'
-import Button from 'react-bootstrap/Button';
+import Navbar from '../Navbar/Navbar';
+import './Dashboard.css';
 
 const Dashboard = () => {
     return (
         <main>
+            <Navbar />
             <div className="app">
                 Welcome, USER
             </div>

@@ -6,8 +6,12 @@ body {
 }
 
 main {
-    min-height: 100vh;
     color: white;
+    padding: 1rem;
+}
+
+.app {
+    padding: 1rem;
 }
 
 .app-container {
@@ -15,7 +19,8 @@ main {
     flex-direction: row;
     margin-top: 3%;
     margin-left: 3%;
-    height: 80vh;
+    min-height: 80vh;
+    flex: 1;
 }
 
 .users-container {
@@ -25,8 +30,11 @@ main {
     /* background: rgba(240, 255, 255, 0.772); */
     /* color: black; */
     min-width: 15vw;
-    /* border: solid black 2px; */
-    border-radius: 16px;
+    /* text-align: center; */
+    /* margin-right: 75%;
+    min-height: 80vh; */
+    border: solid black 2px;
+    border-radius: 1rem;
 }
 .user-list {
     display: flex;
@@ -46,7 +54,7 @@ main {
 
 .chatbox-message-container {
     min-width: 70vw;
-    margin-left: 1%
+    margin-left: 1.5%;
 }
 
 .chatbox {
@@ -55,20 +63,17 @@ main {
     background: rgba(240, 255, 255, 0.772);
     color: black;
     border: solid black 2px;
-    border-radius: 16px;
-    height: 60vh;
-    overflow-x: auto;
-    /* text-align: center; */
-    margin-bottom: 5%;
-    padding: 16px;
-    gap: 8px;
-    
+    border-radius: 1rem;
+    min-height: 65vh;
+    width: 65vw;
+    text-align: center;
+    margin-bottom: 2%;
+    overflow-y: scroll;
 }
 
-.message-and-send {
-    display: flex;
-}
-
+/* .chatbox :: -webkit-scrollbar-track {
+    background: #2388CB
+} */
 .message {
     background: rgb(240, 255, 255, 0.772);
     color: black;
@@ -77,8 +82,9 @@ main {
     background: rgba(240, 255, 255, 0.971);
     color: black;
     border: solid black 2px;
-    border-radius: 16px;
-    width: 60vw;
+    border-radius: 1rem;
+    min-height: 15vh;
+    width: 65vw;
 }
 
 .horizontal-rule {
