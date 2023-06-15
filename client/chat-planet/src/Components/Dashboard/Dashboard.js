@@ -83,7 +83,7 @@ const Dashboard = () => {
                     </div>
                     <div className="message-and-send">
                         <textarea className="message" placeholder='Enter message, then press "Return" or send button...' />
-                        <Button variant="success" className='send-button'>Send</Button>
+                        {/* <Button variant="success" className='send-button'>Send</Button> */}
                     </div>
                 </div>
             </div>
