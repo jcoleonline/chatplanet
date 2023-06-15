@@ -31,10 +31,12 @@ main {
     /* color: black; */
     min-width: 15vw;
     /* text-align: center; */
-    /* margin-right: 75%;
-    min-height: 80vh; */
+    /* margin-right: 75%; */
+     max-height: 80vh;
+/* 
     border: solid black 2px;
-    border-radius: 1rem;
+    border-radius: 1rem; */
+    overflow-y: scroll;
 }
 .user-list {
     display: flex;
@@ -45,7 +47,7 @@ main {
     min-width: 15vw;
     /* border: solid black 2px; */
     border-radius: 16px;
-    overflow-y: scroll;
+    
 }
 
 .users-container>h2 {
@@ -63,8 +65,9 @@ main {
     background: rgba(240, 255, 255, 0.772);
     color: black;
     border: solid black 2px;
+    padding: 12px;
     border-radius: 1rem;
-    min-height: 65vh;
+    height: 65vh;
     width: 65vw;
     text-align: center;
     margin-bottom: 2%;
@@ -105,7 +108,7 @@ main {
 }
 
 textarea::-webkit-resizer {
-    display: none;
+    /* display: none; */
 
 }
 
@@ -118,16 +121,17 @@ textarea {
     padding: 8px;
 }
 
-.send-button {
+/* .send-button {
     margin-left: 8px;
     min-width: 10vw
-}
+} */
 .message-sent {
     align-self: flex-end;
     background: #F868E8;
     max-width: 25vw;
     padding: 6px;
     border-radius: 8px;
+    margin-bottom: 16px;
     color: azure;
 }
 .message-received {
@@ -137,5 +141,6 @@ textarea {
     max-width: 25vw;
     padding: 6px;
     border-radius: 8px;
+    margin-bottom: 16px;
     color: azure;
 }
