@@ -1,13 +1,18 @@
 import Navbar from '../Navbar/Navbar';
+import Logout from '../Navbar/logoutNavbar';
 import './Dashboard.css';
+import { useLocation } from "react-router-dom";
 
 const Dashboard = () => {
+    const location = useLocation();
+    const username = location?.state?.username;
+
     return (
         <main>
-            <Navbar />
+            <Logout />
             <div className="app">
-                Welcome, USER
-            </div>
+        Welcome, {username}
+      </div>
             <div className="app-container">
                 <div className="users-container">
                     <div className="chats-text"

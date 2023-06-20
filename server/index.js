@@ -12,7 +12,7 @@ const { User } = require('./models');
 const initializePassport = require('./passportconfig');
 const { Server } = require("socket.io");
 const cors = require("cors");
-app.use(cors());
+
 
 
 const http = require('http');
@@ -22,6 +22,7 @@ const port = 5000;
 
 const express = require('express');
 const app = express();
+app.use(cors());
 
 const server = http.createServer(app);
 

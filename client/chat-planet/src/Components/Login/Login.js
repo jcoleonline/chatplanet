@@ -25,7 +25,7 @@ const Login = () => {
 
       if (response.ok) {
         // Redirect to /dashboard on success
-        navigate("/dashboard");
+        navigate("/dashboard", { state: { username } });
       } else {
         // Handle authentication failure
         const errorData = await response.json();
