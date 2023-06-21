@@ -43,7 +43,7 @@ const Home = () => {
                     <div className='man-block'>
                          <div className='home-text'>
                             <h1>sdfgsdfgsdfg</h1>
-                            <p>asdfkj af asdlkfjalks;dfjalkjelkj fe klfafej efjelfjkdfjslddj  sldkfjksdj dkfjfd kfslkafj;k </p>
+                            <p>asdfkj af asasdfalkj fe klfafej efjelfjkdfjslddj  sldkfjksdj dkfjfd kfslkafj;k </p>
                          </div>
                          
                         <video src={man} autoPlay loop muted />
