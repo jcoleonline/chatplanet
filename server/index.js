@@ -12,7 +12,9 @@ const { User } = require('./models');
 const initializePassport = require('./passportconfig');
 const { Server } = require("socket.io");
 const cors = require("cors");
-app.use(cors());
+const cookieParser = require("cookieParser")
+let passportSocketIo = require('passport.socketio')
+
 
 
 const http = require('http');
@@ -22,6 +24,8 @@ const port = 5000;
 
 const express = require('express');
 const app = express();
+app.use(cors());
+
 
 const server = http.createServer(app);
 
@@ -31,6 +35,20 @@ const io = new Server(server, {
         methods: ["GET", "POST"]
     }
 });
+io.on('connection', (socket) => {
+    console.log(`Hi`)
+    console.log(`A user has connected ${socket.id}`)
+})
+
+// io.use(
+//     passportSocketIo.authorize({
+//         cookieParser: cookieParser,
+//         key: 'express.sid',
+//         secret: process.env.SESSION_SECRET,
+//         // store: sessionStore
+//     })
+// );
+
 
 
 app.get('/', (req, res) => {

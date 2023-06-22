@@ -5,8 +5,9 @@ import Register from './Components/Register/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './Components/Login/Login';
 import './App.css';
-import io from 'socket.io-client'
-const socket = io.connect("http://localhost:5000")
+import io from 'socket.io-client';
+const socket = io("http://127.0.0.1:5000/");
+
 
 function App() {
 
