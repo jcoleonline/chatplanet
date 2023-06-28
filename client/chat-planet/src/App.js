@@ -5,7 +5,9 @@ import Register from './Components/Register/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './Components/Login/Login';
 import Pricing from './Components/Pricing/Pricing';
+
 import Layout from './Layouts/Layout.js';
+
 import './App.css';
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
           <Route path="/register" element={<Layout><Register /></Layout>} />
           <Route path="/login" element={<Layout><Login /></Layout>} />
           <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
+
         </Routes>
       </BrowserRouter>
     </div>
