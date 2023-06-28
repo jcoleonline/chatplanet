@@ -19,5 +19,12 @@
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
+  },
+  "rehan_test": {
+    "username": "root",
+    "password": "0000",
+    "database": "chatplanet",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
   }
 }

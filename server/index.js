@@ -33,6 +33,24 @@ const io = new Server(server, {
     }
 });
 
+io.on("connection", function (socket) {
+    console.log("A user connected");
+
+    // Emit 'hello' event to everyone
+    io.emit("hello", "Hello, everyone!");
+
+    socket.on("newMessage", function (message) {
+        // Broadcast the new message to everyone connected
+        io.emit("takeUpdate", message);
+    });
+
+    socket.on("disconnect", function () {
+        console.log("A user disconnected");
+
+        // Inform everyone that someone has disconnected
+        io.emit("userDisconnected", "A user has disconnected");
+    });
+});
 
 app.get('/', (req, res) => {
     res.send('Hello from Express!');
@@ -52,6 +70,7 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(passport.initialize());
+app.set('view engine', 'ejs');
 app.use(passport.session());
 app.use(flash());
 app.use(userRouter);
