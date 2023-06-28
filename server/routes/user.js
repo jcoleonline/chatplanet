@@ -62,11 +62,12 @@ router.get("/", (req, res) => {
   
   router.get("/users", async (req, res) => {
     const users = await User.findAll();
-    res.render("user", {
-      locals: {
-        users,
-      },
-    });
+    res.json(users);
+    // res.render("user", {
+    //   locals: {
+    //     users,
+    //   },
+    // });
   });
   
   router.get("/users/:id", async (req, res) => {
